@@ -24,7 +24,7 @@ URL: http://search.cpan.org/dist/DBD-Sybase/
 Packager: Dag Wieers <dag@wieers.com>
 Vendor: Dag Apt Repository, http://dag.wieers.com/apt/
 
-Source: http://www.cpan.org/modules/by-module/DBD/DBD-Sybase-%{version}.tar.gz
+Source: https://github.com/opinkerfi/DBD-Sybase/tarball/perl-DBD-Sybase-%{version}-%{release}
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root
 
 #%{?_with_sybase:BuildArch: i386}
