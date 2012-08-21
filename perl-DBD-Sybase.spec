@@ -2,7 +2,6 @@
 # Authority: dag
 # Upstream: Michael Peppler <mpeppler$peppler,org>
 
-
 %{?rh7:%define _with_threaded 1}
 %{?el2:%define _with_threaded 1}
 
@@ -16,7 +15,7 @@
 Summary: Perl module named DBD-Sybase
 Name: perl-DBD-Sybase
 Version: 1.09
-Release: 5%{?dist}
+Release: 7%{?dist}
 License: Artistic/GPL
 Group: Applications/CPAN
 URL: http://search.cpan.org/dist/DBD-Sybase/
@@ -30,6 +29,8 @@ BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root
 #%{?_with_sybase:BuildArch: i386}
 BuildRequires: perl
 BuildRequires: perl-ExtUtils-MakeMaker
+BuildRequires: freetds-devel
+BuildRequires: freetds
 BuildRequires: perl(DBI) >= 1.50
 %{!?_with_sybase:BuildRequires: freetds-devel}
 %{?_with_sybase:BuildRequires: sybase-openclient >= %{sybver}}
