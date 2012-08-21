@@ -16,7 +16,7 @@
 Summary: Perl module named DBD-Sybase
 Name: perl-DBD-Sybase
 Version: 1.09
-Release: 1%{?dist}
+Release: 3%{?dist}
 License: Artistic/GPL
 Group: Applications/CPAN
 URL: http://search.cpan.org/dist/DBD-Sybase/
@@ -24,7 +24,7 @@ URL: http://search.cpan.org/dist/DBD-Sybase/
 Packager: Dag Wieers <dag@wieers.com>
 Vendor: Dag Apt Repository, http://dag.wieers.com/apt/
 
-Source: https://github.com/opinkerfi/DBD-Sybase/tarball/perl-DBD-Sybase-%{version}-%{release}
+Source: https://github.com/opinkerfi/DBD-Sybase/tarball/perl-DBD-Sybase-%{version}.tar.gz
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root
 
 #%{?_with_sybase:BuildArch: i386}
