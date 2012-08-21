@@ -11,12 +11,12 @@
 %define perl_vendorlib %(eval "`%{__perl} -V:installvendorlib`"; echo $installvendorlib)
 %define perl_vendorarch %(eval "`%{__perl} -V:installvendorarch`"; echo $installvendorarch)
 
-%define real_name DBD-Sybase
+%define real_name perl-DBD-Sybase
 
 Summary: Perl module named DBD-Sybase
 Name: perl-DBD-Sybase
 Version: 1.09
-Release: 3%{?dist}
+Release: 4%{?dist}
 License: Artistic/GPL
 Group: Applications/CPAN
 URL: http://search.cpan.org/dist/DBD-Sybase/
