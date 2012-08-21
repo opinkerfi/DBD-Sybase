@@ -1,4 +1,39 @@
-$Id: CHANGES,v 1.81 2008/08/31 12:08:17 mpeppler Exp $
+$Id: CHANGES,v 1.88 2011/10/02 15:03:17 mpeppler Exp $
+
+Release 1.14
+
+    Fix bad size handling for unicode data. 
+    Remove default charset setting to utf8 (this had been done in 1.11 as part of
+    improved utf8 handling, but has negative side-effects. If unicode handling is needed
+    then set "charset=utf8" as part of the connection string.
+    Enforce the fact that utf8/unicode handling only works with OpenClient 15.x or later.
+
+Release 1.13
+
+    Fix for incorrect UTF8 handling when retrieving UNICODE data (Jean-Pierre Rupp).
+
+Release 1.12
+
+    Bug/Typo/Compatibility fixes with various versions of OpenClient.
+    Experimental: Handle in/out parameters (Merijn Broeren)
+    
+Release 1.11
+
+    Remove reliance on PERL_POLLUTE.
+    Add better support for utf8 (Dave Rolsky)
+    
+Release 1.10
+
+    Handle 15.x datatypes correctly.
+    Add LONGMS date format symbol to handle microseconds for bigdatetime.
+    Add support for CS_LONGCHAR_TYPE (Mark Aufflick)
+    Document syb_isdead().
+    Handle 64bit builds with FreeTDS (Ian Grant/Hans Kristian Rosbach)
+    Add foreign_key_info & statistics_info (Jim Radford)
+    Change behavior of large fixed precision numeric types (money, bigint)
+    to be converted to a string internally and returned as such to the caller
+    (behavior similar to numeric/decimal). This can be reverted to the old behavior 
+    by defining SYB_NATIVE_NUM.
 
 Release 1.09
 

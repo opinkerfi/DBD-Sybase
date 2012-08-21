@@ -1,6 +1,6 @@
-/* $Id: Sybase.h,v 1.14 2007/04/11 17:27:29 mpeppler Exp $
+/* $Id: Sybase.h,v 1.21 2011/10/02 14:53:49 mpeppler Exp $
 
-   Copyright (c) 1997 - 2007 Michael Peppler
+   Copyright (c) 1997 - 2011 Michael Peppler
 
    You may distribute under the terms of either the GNU General Public
    License or the Artistic License, as specified in the Perl README file.
@@ -49,6 +49,18 @@
 
 #include "dbdimp.h"
 
+#if defined(CS_CURRENT_VERSION)
+#define CTLIB_VERSION	CS_CURRENT_VERSION
+#else
+#if defined(CS_VERSION_157)
+#define CTLIB_VERSION   CS_VERSION_157
+#else 
+#if defined(CS_VERSION_155)
+#define CTLIB_VERSION   CS_VERSION_155
+#else 
+#if defined(CS_VERSION_150)
+#define CTLIB_VERSION   CS_VERSION_150
+#else 
 #if defined(CS_VERSION_125)
 #define CTLIB_VERSION   CS_VERSION_125
 #else 
@@ -60,6 +72,16 @@
 #else
 #define CTLIB_VERSION	CS_VERSION_100
 #endif
+#endif
+#endif
+#endif
+#endif
+#endif
+#endif
+
+#if defined(CS_UNICHAR_TYPE) && defined(CS_VERSION_150)
+#if defined (is_utf8_string)
+#define DBD_CAN_HANDLE_UTF8
 #endif
 #endif
 
